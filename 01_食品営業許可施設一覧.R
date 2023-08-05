@@ -22,3 +22,8 @@ licensed_food_business_2022 <- read_excel("data-raw/食品営業許可施設一�
            crs = JGD2011)
 
 write_sf(licensed_food_business_2022, "data/食品営業許可施設一覧_2022.geojson")
+
+licensed_food_business_2022 |>
+  st_drop_geometry() |>
+  select(!c(loc_name, i_conf, i_lvl)) |>
+  write_excel_csv("data/食品営業許可施設一覧_2022.csv")

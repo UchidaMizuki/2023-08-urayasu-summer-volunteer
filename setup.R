@@ -3,7 +3,6 @@ library(fs)
 library(readxl)
 library(vctrs)
 library(sf)
-library(reticulate)
 
 # 00_setup ----------------------------------------------------------------
 
